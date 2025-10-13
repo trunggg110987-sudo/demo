@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+h2 {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+}
+
+h3 {
+    color: blue;
+    margin-bottom: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 70%;
+}
+
+th, td {
+    border: 1px solid black;
+    width: 80px;
+    height: 50px;
+    text-align: center;
+    vertical-align: top;
+}
+
+/* hàng tiêu đề ngày trong tuần */
+.tieu-de th {
+    background-color: orange;
+    color: black;
+    padding: 5px;
+}
+
+/* hàng chữ Sun, Mon, ... */
+.sub-tieu-de td {
+    background-color: #fff3cd;
+    font-weight: bold;
+}
+
+/* Chủ nhật màu đỏ, Thứ bảy màu xanh */
+.cn, .cn sub { color: red; }
+.tb, .tb sub { color: blue; }
+
+/* số nhỏ ở góc dưới */
+sub {
+    font-size: 10px;
+}
+
+/* căn đều khoảng cách trong ô */
+td {
+    padding: 5px;
+}
