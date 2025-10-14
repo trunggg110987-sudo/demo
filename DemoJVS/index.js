@@ -1,11 +1,10 @@
-let i = 10
+let vatly= prompt("nhập điểm vật lý");
+let hoahoc= prompt("nhập điểm hóa học");
+let sinhhoc= prompt("nập điểm sinh học");
 
-let f = 20.5
-let b = true
-let s = 'Hà Nội'
-document.write('i = ' + i)
-document.write('<br/>')
-document.write('f = ' + f)
-document.write('<br/>')
-document.write('b = ' + b)
-document.write('<br/>')
+let tong = vatly + hoahoc + sinhhoc
+let diemTB = (vatly + hoahoc + sinhhoc)/3
+document.write(diemTB)
+document.write(tong)
+
+
