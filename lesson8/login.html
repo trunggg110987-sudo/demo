@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <script>
+          let userName = prompt('ban la ai?')
+          if(userName === 'admin') {
+              let pass = prompt('nhap mat khau')
+              if (pass === 'theMaster'){
+                  alert('welcome')
+              }else if(pass == null){
+                  alert('canceled')
+              }else{
+                  alert('wrong password')
+              }
+          }else if (userName == null) {
+              alert('canceled')
+          }else{
+              alert('i dont know you')
+          }
+      </script>
+</body>
+</html>
