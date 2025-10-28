@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Tính chỉ số BMI</h2>
+<form>
+    <label>Nhập cân nặng: (kg)</label>
+    <input type="text" id = "weight" placeholder="nhập chỉ số cân nặng"><br><br>
+    <label>nhập chiều cao: (m)</label>
+    <input type="text" id = "height" placeholder="nhập chiều cao"><br><br>
+    <button type="button" id = "button" onclick="check()">check</button>
+</form>
+<p id="result"></p>
+<script>
+    function check(){
+        let he = document.getElementById("height").value;
+        let we = document.getElementById("weight").value;
+        let bmi = we / (Math.pow(he, 2));
+        let result ="";
+        if(bmi < 16){
+             result = "gay";
+        }else if(bmi >=16 && bmi <=25){
+            result = "binh thuong";
+        }else{
+            result = "beo phi";
+        }
+document.getElementById("result").innerHTML = result;
+    }
+
+</script>
+</body>
+</html>
