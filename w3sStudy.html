@@ -9,17 +9,13 @@
 <p id="demo"></p>
 
 <script>
-    document.getElementById("demo").innerHTML =
-        Number(true) + "<br>" +
-        Number(false) + "<br>" +
-        Number("10") + "<br>" +
-        Number("  10") + "<br>" +
-        Number("10  ") + "<br>" +
-        Number(" 10  ") + "<br>" +
-        Number("10.33") + "<br>" +
-        Number("10,33") + "<br>" +
-        Number("10 33") + "<br>" +
-        Number("John");
+    for(let i =4; i < 5; i--){
+        for(let j =0;j > i; j++){
+            if(i)
+                document.write("*&nbsp;&nbsp;&nbsp;")
+        }
+        document.write('<br>')
+    }
 </script>
 
 </body>
