@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class ="container-fluid">
+    ::before
+<div id = " puzzles"></div>
+    ::after
+</div>
+<script>
+    var Images = {
+        imgsDB:
+        [
+            ["funny-cat1_part1x1.jpg",
+                "funny-cat1_part2x1.jpg",
+                "funny-cat1_part3x1.jpg",
+                "funny-cat1_part4x1.jpg",
+                "funny-cat1_part5x1.jpg"],
+            ["monkey_part1x1.jpg",
+                "monkey_part2x1.jpg",
+                "monkey_part3x1.jpg",
+                "monkey_part4x1.jpg",
+                "monkey_part5x1.jpg"],
+            ["panda_swap_part1x1.jpg",
+                "panda_swap_part2x1.jpg",
+                "panda_swap_part3x1.jpg",
+                "panda_swap_part4x1.jpg",
+                "panda_swap_part5x1.jpg"]
+        ],
+        imgpos: [0, 0, 0, 0, 0]
+    }
+    function placeImages(imgpos1, imgToggle) {
+        Images.imageName = "#img" + imgpos1.toString();
+        $(imageName).attr("src", "./img/" + Images.imgsDB[imgToggle][imgpos1 - 1]);
+    }
+    function setImagesrandom(){
+        for (let i = 0; i < 5; i++) {
+            var num1 = Math.floor(Math.random() * 5);
+            placeImage(i, num1);
+        }
+    }
+    function imageClick(imgpos1){
+        var imgToggle = Image.imgpos[imgpos1 - 1];
+        if(imgToggle === 0){
+
+        }
+    }
+</script>
+</body>
+</html>
