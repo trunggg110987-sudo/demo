@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id = "tuoi" type = "number" name = "tuoi">
+<button type = "submit" id ="submit"> kiem tra</button>
+<p id = "result"></p>
+</body>
+<script>
+    document.getElementById("submit").onclick = function() {
+        let tuoi = Number(document.getElementById("tuoi").value);
+        if (tuoi >= 15) {
+            document.getElementById("result").innerHTML = "Đủ tuổi học lớp 10";
+        } else {
+            document.getElementById("result").innerHTML = "ko tuổi học lớp 10";
+        }
+}
+</script>
+</html>
