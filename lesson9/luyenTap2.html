@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type = "number" id = "num">
+<button type = "button" id = "check">kiểm tra</button>
+<p id = "result"></p>
+</body>
+<script>
+    document.getElementById("check").onclick = function () {
+        let x = Number(document.getElementById("num").value);
+        let square = x * x;
+        document.getElementById("result").innerText ="diện tích của hình vuông là : " + square;
+    }
+</script>
+</html>
