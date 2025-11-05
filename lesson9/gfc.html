@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type = "checkbox" id = "good">GOOD <br>
+<input type = "checkbox" id = "cheap">GOOD <br>
+<input type = "checkbox" id = "fast">GOOD <br>
+</body>
+<script>
+    let good = document.getElementById("good");
+    let cheap = document.getElementById("cheap");
+    let fast = document.getElementById("fast");
+
+    function enForceRule(changed){
+        if(good.checked && cheap.checked && fast.checked) {
+            if (changed === good) fast.checked = false;
+            else if (changed === cheap) good.checked = false;
+            else if (changed === fast) cheap.checked = false;
+        }
+    }
+    good.onchange = function(){
+        enForceRule(good);
+    }
+    fast.onchange = function(){
+        enForceRule(fast);
+    }
+    cheap.onchange = function() {
+        enForceRule(cheap);
+    }
+</script>
+</html>

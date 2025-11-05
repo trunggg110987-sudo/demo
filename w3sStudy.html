@@ -7,14 +7,21 @@
 <p>The Number() method converts variables to numbers:</p>
 
 <p id="demo"></p>
-
+<p id = "result"></p>
+<input type ="number" id = "number1" name = "number" placeholder = "Enter Number">
+<input type ="number" id = "number2" name = "number" placeholder = "Enter Number">
+<input type ="number" id = "number3" name = "number" placeholder = "Enter Number">
+<button id = "test" onclick="myFunction()">Try it</button>
 <script>
-    for(let i =4; i < 5; i--){
-        for(let j =0;j > i; j++){
-            if(i)
-                document.write("*&nbsp;&nbsp;&nbsp;")
-        }
-        document.write('<br>')
+    function myFunction() {
+        let x = Number(document.getElementById("number1").value);
+        let y = Number(document.getElementById("number2").value);
+        let z = Number(document.getElementById("number3").value);
+        let max = x;
+        if(y > max) max = y;
+        if(z > max) max = z;
+        document.getElementById("result").innerText = "so lon nhat la" + max;
+
     }
 </script>
 
