@@ -5,15 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-<input type = "number" id = "num">
+<input type = "number" id = "num1" placeholder ="nhập chiều dài"><br><br>
+<input type = "number" id = "num2"placeholder = "nhập chiều rộng"><br><br>
 <button type = "button" id = "check">kiểm tra</button>
 <p id = "result"></p>
 </body>
 <script>
+
     document.getElementById("check").onclick = function () {
-        let x = Number(document.getElementById("num").value);
-        let square = x * x;
-        document.getElementById("result").innerText ="diện tích của hình vuông là : " + square;
+        let x = Number(document.getElementById("num1").value);
+        let y = Number(document.getElementById("num2").value);
+        let retangle = x * y;
+        document.getElementById("result").innerText ="diện tích của hình chữ nhật là : " + retangle;
     }
 </script>
 </html>

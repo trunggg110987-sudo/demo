@@ -1,30 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sinh nhật hồng</title>
+    <style>
+        body {
+            background-color: pink;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .scene {
+            display: flex;
+            align-items: flex-end;
+            gap: 40px;
+            position: relative;
+        }
+
+        /* Cô gái */
+
+        .girl {
+            width: 60px;
+            height: 150px;
+            position: relative;
+        }
+
+        .girl .head {
+            width: 50px;
+            height: 50px;
+            background: #ffe0e0;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        .girl .body {
+            width: 60px;
+            height: 80px;
+            background: #ff66b2;
+            border-radius: 0 0 30px 30px;
+            margin: 5px auto;
+        }
+
+        .girl .hair {
+            position: absolute;
+            top: 0;
+            left: 5px;
+            width: 50px;
+            height: 70px;
+            background: #8b4513;
+            border-radius: 30px;
+            z-index: -1;
+        }
+        .eye{
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+
+        /* Chàng trai */
+        .boy {
+            width: 60px;
+            height: 150px;
+            position: relative;
+        }
+
+        .boy .head {
+            width: 50px;
+            height: 50px;
+            background: #ffe0c0;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        .boy .hair {
+            position: absolute;
+            top: 0;
+            left: 5px;
+            width: 50px;
+            height: 25px;
+            background: #2b1b0e;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .boy .body {
+            width: 60px;
+            height: 80px;
+            background: #3b7ddd;
+            border-radius: 10px;
+            margin: 5px auto;
+        }
+
+        /* Bánh sinh nhật */
+        .cake {
+            width: 80px;
+            height: 50px;
+            background: #ffb6c1;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .cake::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            width: 20px;
+            height: 20px;
+            background: #fff0f5;
+            border-radius: 5px;
+        }
+
+        .candle {
+            position: absolute;
+            top: -25px;
+            left: 37px;
+            width: 6px;
+            height: 20px;
+            background: #ff69b4;
+        }
+
+        .flame {
+            position: absolute;
+            top: -35px;
+            left: 38px;
+            width: 6px;
+            height: 10px;
+            background: yellow;
+            border-radius: 50%;
+            animation: flicker 0.3s infinite alternate;
+        }
+
+        @keyframes flicker {
+            from { opacity: 1; transform: scale(1); }
+            to { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        /* Nút và lời nhắn */
+        button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #ff66b2;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff3385;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #d63384;
+            font-weight: bold;
+            display: none;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
 <body>
+<div class="scene">
+    <div class="boy">
+        <div class="hair"></div>
+        <div class="head"></div>
+        <div class="body"></div>
+    </div>
 
-<h2>JavaScript Global Methods</h2>
+    <div class="cake">
+        <div class="candle"></div>
+        <div class="flame"></div>
+    </div>
 
-<p>The Number() method converts variables to numbers:</p>
+    <div class="girl">
+        <div class="hair"></div>
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class ="eye"></div>
+    </div>
+</div>
 
-<p id="demo"></p>
-<p id = "result"></p>
-<input type ="number" id = "number1" name = "number" placeholder = "Enter Number">
-<input type ="number" id = "number2" name = "number" placeholder = "Enter Number">
-<input type ="number" id = "number3" name = "number" placeholder = "Enter Number">
-<button id = "test" onclick="myFunction()">Try it</button>
+<button onclick="showMessage()">Click vào đây 💗</button>
+<div class="message" id="msg">Cậu là người xinh đẹp nhất trong mắt tớ!! 💞</div>
+
 <script>
-    function myFunction() {
-        let x = Number(document.getElementById("number1").value);
-        let y = Number(document.getElementById("number2").value);
-        let z = Number(document.getElementById("number3").value);
-        let max = x;
-        if(y > max) max = y;
-        if(z > max) max = z;
-        document.getElementById("result").innerText = "so lon nhat la" + max;
-
+    function showMessage() {
+        document.getElementById('msg').style.display = 'block';
     }
 </script>
-
 </body>
 </html>
-

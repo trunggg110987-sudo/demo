@@ -1,3 +1,3 @@
-let x = 5n;
-let y = x / 2;
-console.log(y);
+const sayHello = (nane) => "Hello World!";
+sayHello("trung");
+console.log(sayHello("trung"));
