@@ -5,7 +5,20 @@
     <title>Title</title>
 </head>
 <body>
-hello world
-<h1>!!</h1>
 </body>
+<script>
+    let Hello = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let Hehe  = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function getString(starName) {
+        for (let i = 0; i < Hello.length; i++) {
+            if (Hello[i].toLowerCase() === starName.toLowerCase()) {
+                return Hehe[i];
+            }
+        }
+        return null;
+    }
+    let name = prompt("Nhập tên ngôi sao:");
+    alert(getString(name) || "Không tìm thấy ngôi sao!");
+</script>
 </html>
