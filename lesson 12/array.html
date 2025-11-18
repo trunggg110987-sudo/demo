@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>JS bin</title>
+    <script src="../w3sStudy.js"></script>
 </head>
 <style>
     body {
@@ -14,23 +15,6 @@
 <input type="button" id='button1' value="add" onclick = "addArray();">
 <input type="button" id='button2' value="display" onclick = "displayArray();">
 <p id='result'></p>
-<script>
-    let x = 0;
-    let array = Array()
-    function addArray(){
-        array[x]=document.getElementById("number").value;
-        alert("Element: " + array[x] + " Added at index " + x);
-        x++;
-        document.getElementById("number").value = "";
-    }
-    function displayArray(){
-        let e = "<hr>"
-        for(let i=0; i<array.length; i++){
-            e += "Element"+ " " + i+ " " + "index"+" "+ array[i] +"<br>";
-        }
-        document.getElementById("result").innerHTML = e
-    }
-</script>
-</body>
 
+</body>
 </html>

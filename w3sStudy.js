@@ -1,10 +1,15 @@
-function swap(a, b) {
-    var temp = a;
-    a = b;
-    b = temp;
+let x = 0;
+let array = Array()
+function addArray(){
+    array[x]=document.getElementById("number").value;
+    alert("Element: " + array[x] + " Added at index " + x);
+    x++;
+    document.getElementById("number").value = "";
 }
-
-var a = 5;
-var b = 10;
-swap(a, b);
-console.log("a = " + a + ", b = " + b);
+function displayArray(){
+    let e = "<hr>"
+    for(let i=0; i<array.length; i++){
+        e += "Element"+ " " + i+ " " + "index"+" "+ array[i] +"<br>";
+    }
+    document.getElementById("result").innerHTML = e
+}
