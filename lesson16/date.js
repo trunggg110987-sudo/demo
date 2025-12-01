@@ -1,14 +1,14 @@
-let myDate = function(day , month, year){
+let Date = function(day, month, year) {
     this.day = day;
     this.month = month;
     this.year = year;
-    this.getDay = function(){
+    this.getDay = function () {
         return this.day;
     }
-    this.getMonth = function(){
+    this.getMonth = function () {
         return this.month;
     }
-    this.getYear = function(){
+    this.getYear = function () {
         return this.year;
     }
     this.setDay = function(day){
@@ -20,23 +20,24 @@ let myDate = function(day , month, year){
     this.setYear = function(year){
         this.year = year;
     }
+    this.setDate = function(day, month, year){
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    }
+    this.toString = function(){
+        let d = this.day;
+        let m = this.month;
+        if(d < 10){
+            d = '0' + d;
+        }
+        if(m < 10){
+            m = '0' + m;
+        }
+        return d + "/" + m + "/" + this.year;
+    }
+}
 
-this.setDate = function(day, month, year){
-    this.day = day;
-    this.month = month;
-    this.year = year;
-}
-this.toString = function() {
-    let dd = this.day < 10 ? '0' + this.day : this.day;
-    let mm = this.month < 10 ? '0' + this.month : this.month;
-    let yyyy = this.year < 1000 ? '0' + this.year : this.year;
-    return dd + "/" + mm + "/" + yyyy;
-}
-}
-let date = new myDate(17, 8, 2006);
+let date = new Date(1,5,2005);
+date.setDate(17,8,2006)
 console.log(date.toString());
-
-date.setDate(1, 5, 2005);
-console.log(date.toString());
-
-

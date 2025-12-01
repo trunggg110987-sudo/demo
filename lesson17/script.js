@@ -1,8 +1,12 @@
-function nguyenDuong(n){
-    if(n > 0 && Number.isInteger(n)){
-        return true;
-    }else{
-        return false;
-    }
+function addNumbers() {
+    let firstNum = 4;
+    let secondNum = 8;
+    let result = firstNum + secondNum;
+    return result;
 }
-console.log(nguyenDuong(2))
+
+let result = 0;
+alert("Giá trị của result trước khi gọi hàm: " + result);
+
+result = addNumbers();
+alert("Giá trị của result sau khi gọi hàm: " + result);

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangle Demo</title>
+</head>
+<body>
+<h2>Demo lớp Rectangle</h2>
+<canvas id="myCanvas" width="500" height="300" style="border:1px solid black;"></canvas>
+
+<p id="info"></p>
+
+<script>
+
+    class Rectangle {
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+
+        getArea() {
+            return this.length * this.width;
+        }
+
+        getPerimeter() {
+            return 2 * (this.length + this.width);
+        }
+
+        draw(ctx, x, y) {
+            ctx.beginPath();
+            ctx.rect(x, y, this.length, this.width);
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+            ctx.fillStyle = "#FFCC99";
+            ctx.fill();
+        }
+    }
+
+
+    let rectangle = new Rectangle(200, 100);
+
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    rectangle.draw(ctx, 50, 50);
+
+    document.getElementById("info").innerHTML =
+        "➤ Hình ban đầu: " +
+        "<br>Chiều dài: " + rectangle.length +
+        "<br>Chiều rộng: " + rectangle.width +
+        "<br>Diện tích: " + rectangle.getArea() +
+        "<br>Chu vi: " + rectangle.getPerimeter();
+
+    rectangle.length = 300;
+    rectangle.width = 150;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    rectangle.draw(ctx, 50, 50);
+
+    document.getElementById("info").innerHTML +=
+        "<br><br>➤ Sau khi thay đổi: " +
+        "<br>Chiều dài mới: " + rectangle.length +
+        "<br>Chiều rộng mới: " + rectangle.width +
+        "<br>Diện tích mới: " + rectangle.getArea() +
+        "<br>Chu vi mới: " + rectangle.getPerimeter();
+</script>
+</body>
+</html>
